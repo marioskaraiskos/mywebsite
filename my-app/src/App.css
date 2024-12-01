@@ -1,0 +1,198 @@
+/* General Styling */
+.App {
+  text-align: center;
+}
+
+/* Light Theme */
+body[data-theme="light"] {
+  background-color: white;
+  color: black;
+}
+
+body[data-theme="light"] .navbar {
+  background-color: #f8f9fa; /* Light gray */
+  color: black;
+}
+
+/* Dark Theme */
+body[data-theme="dark"] {
+  background-color: #121212; /* Dark background */
+  color: white;
+}
+
+body[data-theme="dark"] .navbar {
+  background-color: #121212; /* Dark gray */
+  color: white;
+}
+
+/* Button Container Styling */
+.buttonContainer {
+  width: 30%;
+  margin: 30px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: inherit; /* Inherit color based on theme */
+}
+
+/* Individual Button Classes */
+.left {
+  margin-right: auto;
+}
+
+.right {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.projects:hover,
+.contact:hover {
+  background-color: lightgray;
+  color: inherit;
+  border-radius: 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Letter Animations */
+.marioskaraiskos .letter {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transformation */
+}
+
+.marioskaraiskos:hover .letter {
+  transform: translateY(-10px) rotate(15deg); /* Moves and rotates each letter */
+}
+
+.marioskaraiskos:hover .letter:nth-child(1) { transition-delay: 0.1s; }
+.marioskaraiskos:hover .letter:nth-child(2) { transition-delay: 0.2s; }
+.marioskaraiskos:hover .letter:nth-child(3) { transition-delay: 0.3s; }
+/* Continue for other letters */
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: inherit; /* Match current theme */
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s, color 0.2s;
+}
+
+
+/* Profile picture styling */
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.MainPage {
+  display: flex;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+}
+
+
+
+h1 {
+  font-size: 30px;
+  margin: 20px;
+}
+
+.wave-emoji {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Animation on hover */
+.wave-emoji:hover {
+  animation: wave 0.6s ease-in-out infinite;
+}
+
+/* Keyframes for waving effect */
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+.picture-container {
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.status-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.online {
+  background-color: green;
+}
+
+.status-text {
+  font-size: 14px;
+  color: inherit;
+  text-align: center;
+
+}
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.picture-container-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.himarios {
+  font-size: 50px;
+}

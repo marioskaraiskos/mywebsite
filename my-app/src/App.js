@@ -68,6 +68,10 @@ function App() {
         </div>
       </div>
       
+      <p className="description">
+        A passionate and driven 22-year-old software developer currently graduating from New York College Athens,
+         i dedicate much of my free time creating projects with different technologies and troubleshoot code on various platforms.
+      </p>
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { FaSun, FaMoon } from "react-icons/fa"; // Import Sun and Moon icons
-import pic2 from './img/pic2.PNG';
 import './App.css';
+import Home from "./Home";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Projects from "./Projects";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -21,34 +23,38 @@ function App() {
     localStorage.setItem("theme", newTheme);
   };
 
-  return (
+  return (<Router>
     <div className="App">
       <nav className="navbar">
         <form className="container-fluid justify-content-start">
           <div className="buttonContainer">
             <div className="left">
-              <button className="marioskaraiskos" type="button" id="marioskaraiskos">
+              <Link to="/marioskaraiskos.dev" className="marioskaraiskos">
                 <span className="letter">M</span>
-                <span className="letter">a</span>
-                <span className="letter">r</span>
-                <span className="letter">i</span>
-                <span className="letter">o</span>
-                <span className="letter">s</span>
+                <span className="letter">A</span>
+                <span className="letter">R</span>
+                <span className="letter">I</span>
+                <span className="letter">O</span>
+                <span className="letter">S</span>
                 <span className="letter">_</span>
                 <span className="letter">K</span>
-                <span className="letter">a</span>
-                <span className="letter">r</span>
-                <span className="letter">a</span>
-                <span className="letter">i</span>
-                <span className="letter">s</span>
-                <span className="letter">k</span>
-                <span className="letter">o</span>
-                <span className="letter">s</span>
-              </button>
+                <span className="letter">A</span>
+                <span className="letter">R</span>
+                <span className="letter">A</span>
+                <span className="letter">I</span>
+                <span className="letter">S</span>
+                <span className="letter">K</span>
+                <span className="letter">O</span>
+                <span className="letter">S</span>
+              </Link>
             </div>
             <div className="right">
-              <button className="projects" type="button" id="projects">Projects</button>
-              <button className="contact">Contact</button>
+              <Link to="/projects" className="projects">
+                Projects
+              </Link>
+              <Link to="/contact" className="contact">
+                Contact
+              </Link>
               {/* Theme Toggle Button */}
               <button className="theme-toggle-btn" onClick={toggleTheme}>
                 {theme === "light" ? <FaMoon size={24} /> : <FaSun size={24} />}
@@ -58,21 +64,12 @@ function App() {
         </form>
       </nav>
 
-      <div className="picture-container">
-        <div className="picture-container-row">
-        <img src={pic2} className="picture"></img>
-        <div className="himarios">Hey, I'm Marios Karaiskos  <div className="wave-emoji">👋</div></div></div>
-        <div className="status">
-        <span className="status-dot online"></span>
-        <span className="status-text">Available to work</span>
-        </div>
-      </div>
-      
-      <p className="description">
-        A passionate and driven 22-year-old software developer currently graduating from New York College Athens,
-         i dedicate much of my free time creating projects with different technologies and troubleshoot code on various platforms.
-      </p>
+      <Routes>
+        <Route path="/marioskaraiskos.dev" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
     </div>
+  </Router>
   );
 }
 

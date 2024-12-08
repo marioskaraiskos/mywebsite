@@ -204,3 +204,30 @@ h1 {
   margin: 0 auto;
   margin-top: 30px;
 }
+
+
+
+.projects , .contact {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: inherit ; /* Button background color */
+  color: inherit; /* Button text color */
+  text-align: center;
+  text-decoration: none; /* Removes underline from links */
+  border: none; /* Removes border for the button look */
+  border-radius: 4px; /* Rounded corners for the button */
+  font-size: 16px; /* Font size for the button */
+  cursor: pointer;
+}
+
+.marioskaraiskos {
+  color: inherit;
+  background-color: inherit;
+}
+
+.tech-stack {
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 40px;
+}

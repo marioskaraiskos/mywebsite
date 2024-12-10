@@ -3,6 +3,10 @@ import pic2 from './img/pic2.PNG';
 import './App.css';
 import './techstack';
 import TechStack from "./techstack";
+import './output.css';
+import sudoku from './img/sudoku.jpg'
+
+
 
 function Home() {
   return (
@@ -28,6 +32,16 @@ function Home() {
       <p className="tech-stack">current tech stack:</p>
       <div className="tech-stack-div">
       <TechStack />
+      <div class="mb-1 w-fit rounded-md bg-muted px-1.5 py-1 text-muted-foreground text-xs" className="recent-projects">Recent projects</div>
+      <div class="card">
+  <img src={sudoku} class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="./" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
       </div>
     </div>
   );

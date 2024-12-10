@@ -4,6 +4,7 @@ import './App.css';
 import Home from "./Home";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -23,53 +24,55 @@ function App() {
     localStorage.setItem("theme", newTheme);
   };
 
-  return (<Router>
-    <div className="App">
-      <nav className="navbar">
-        <form className="container-fluid justify-content-start">
-          <div className="buttonContainer">
-            <div className="left">
-              <Link to="/marioskaraiskos.dev" className="marioskaraiskos">
-                <span className="letter">M</span>
-                <span className="letter">A</span>
-                <span className="letter">R</span>
-                <span className="letter">I</span>
-                <span className="letter">O</span>
-                <span className="letter">S</span>
-                <span className="letter">_</span>
-                <span className="letter">K</span>
-                <span className="letter">A</span>
-                <span className="letter">R</span>
-                <span className="letter">A</span>
-                <span className="letter">I</span>
-                <span className="letter">S</span>
-                <span className="letter">K</span>
-                <span className="letter">O</span>
-                <span className="letter">S</span>
-              </Link>
+  return (
+    <Router basename="/marioskaraiskos.dev">
+      <div className="App">
+        <nav className="navbar">
+          <form className="container-fluid justify-content-start">
+            <div className="buttonContainer">
+              <div className="left">
+                <Link to="/" className="marioskaraiskos">
+                  <span className="letter">M</span>
+                  <span className="letter">A</span>
+                  <span className="letter">R</span>
+                  <span className="letter">I</span>
+                  <span className="letter">O</span>
+                  <span className="letter">S</span>
+                  <span className="letter">_</span>
+                  <span className="letter">K</span>
+                  <span className="letter">A</span>
+                  <span className="letter">R</span>
+                  <span className="letter">A</span>
+                  <span className="letter">I</span>
+                  <span className="letter">S</span>
+                  <span className="letter">K</span>
+                  <span className="letter">O</span>
+                  <span className="letter">S</span>
+                </Link>
+              </div>
+              <div className="right">
+                <Link to="/projects" className="projects">
+                  Projects
+                </Link>
+                <Link to="/contact" className="contact">
+                  Contact
+                </Link>
+                {/* Theme Toggle Button */}
+                <button className="theme-toggle-btn" onClick={toggleTheme}>
+                  {theme === "light" ? <FaMoon size={24} /> : <FaSun size={24} />}
+                </button>
+              </div>
             </div>
-            <div className="right">
-              <Link to="/projects" className="projects">
-                Projects
-              </Link>
-              <Link to="/contact" className="contact">
-                Contact
-              </Link>
-              {/* Theme Toggle Button */}
-              <button className="theme-toggle-btn" onClick={toggleTheme}>
-                {theme === "light" ? <FaMoon size={24} /> : <FaSun size={24} />}
-              </button>
-            </div>
-          </div>
-        </form>
-      </nav>
+          </form>
+        </nav>
 
-      <Routes>
-        <Route path="/marioskaraiskos.dev" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
-    </div>
-  </Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,13 @@
+.tech-icon {
+    transition: color 0.3s;
+  }
+  
+  .tech-icon:hover {
+    color: var(--hover-color);
+  }
+  
+  /* Dynamic color handling */
+  .tech-icon[data-color]:hover {
+    color: attr(data-color);
+  }
+  

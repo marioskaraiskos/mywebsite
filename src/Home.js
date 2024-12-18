@@ -5,6 +5,7 @@ import './techstack';
 import TechStack from "./techstack";
 import './output.css';
 import sudoku from './img/sudoku.jpg'
+import stopwatch from './img/stopwatch.PNG';
 
 
 
@@ -34,7 +35,7 @@ function Home() {
       <TechStack />
       <div class="mb-1 w-fit rounded-md bg-muted px-1.5 py-1 text-muted-foreground text-xs" className="recent-projects">Recent projects</div>
       <div class="card">
-  <img src={sudoku} class="card-img-top" alt="..." />
+  <img src={stopwatch} class="card-img-top" alt="..." />
   <div class="card-body">
     <h5 class="card-title">Stopwatch App</h5>
     <p class="card-text">This is a Stopwatch App i created in react and tailwind css</p>

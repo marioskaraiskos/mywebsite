@@ -25,7 +25,7 @@ function App() {
   };
 
   return (
-    <Router basename="/">
+    <Router basename="/mysite">
       <div className="App">
         <nav className="navbar">
           <form className="container-fluid justify-content-start">
